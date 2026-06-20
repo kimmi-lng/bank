@@ -6,7 +6,7 @@ class BankAccount(Account):
         self.account_name = account_name
 
     def get_balance(self):
-        print(f"\nAccount '{self.account_name}' balance is P{self._account_balance.2f}")
+        print(f"\nAccount '{self.account_name}' balance is P'{self._account_balance:.2f}")
 
     def deposit(self, amount):
         self._account_balance += amount
@@ -20,5 +20,4 @@ class BankAccount(Account):
             self.get_balance()
         else:
             print(f"\nInsufficient funds for withdrawal of P{amount:.2f}.")
-    
     
