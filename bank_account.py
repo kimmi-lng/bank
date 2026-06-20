@@ -12,3 +12,13 @@ class BankAccount(Account):
         self._account_balance += amount
         print(f"\nDeposit of P{amount:.2f} successful.")
         self.get_balance()
+
+    def withdraw(self, amount):
+        if self._account_balance >= amount:
+            self._account_balance = self._account_balance - amount
+            print(f"\nWithdrawal of P{amount:.2f} successful.")
+            self.get_balance()
+        else:
+            print(f"\nInsufficient funds for withdrawal of P{amount:.2f}.")
+    
+    
